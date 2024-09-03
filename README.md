@@ -10,7 +10,7 @@
 >>> ###### [tmux🚧](#tmux)
 >>> ###### [Hydra](#hydra)
 >>> ###### [Profiler🚧](#profiler)
->> ##### [Frequently Asked Questions](#FAQ)
+>> ##### [Frequently Asked Questions](#faq)
 >>> ###### [Anaconda doesn't update a package to the version I want](#anaconda)
 >>> ###### [Edit file on the server](#edit_file)
 >>> ###### [The copying procedure from the server to my local pc and vice versa is so tedious](#copy)
@@ -69,14 +69,17 @@ We have a WhatsApp group to promote coexistence and dialogue. If you need to exc
 # <a id="tools"></a>Useful Tools
 
 ## tmux<a id="tmux"></a>
+🚧
 
 ## <a id="hydra"></a>Hydra
 
 Hydra is a framework that facilitates running and collecting results of experiments with multiple variations or combinations of configuration parameters. See the [examples](https://github.com/Mathmode/hydra-examples) on how to use the Hydra Framework to configure and run computational experiments   developed by our colleague [Tomas Teijeiro](https://github.com/tomas-teijeiro).
 
 ## Profiler <a id="profiler"></a>
+🚧
 
-# <a id="FAQ"></a>Frequently Asked Questions:
+# <a id="faq"></a>Frequently Asked Questions:
+🚧
 
 **What can I do if Anaconda doesn't update a package to the version I want?**<a name="anaconda"></a>
 
