@@ -11,7 +11,12 @@
 >>> ###### [Hydra](#hydra)
 >>> ###### [Profiler🚧](#profiler)
 >> ##### [Frequently Asked Questions](#FAQ)
->>> ###### [🚧](#anaconda)
+>>> ###### [Anaconda doesn't update a package to the version I want](#anaconda)
+>>> ###### [Edit file on the server](#edit_file)
+>>> ###### [The copying procedure from the server to my local pc and vice versa is so tedious](#copy)
+>>> ###### [Can I disconnect from the SSH connection and leave the code running?](#disconnect)
+>>> ###### [How can I check if the code ended its execution on the server?](#attach)
+>>> ###### [How can I run the code in one GPU and limit its memory?](#limit_GPU)
 * * * * *
 
 #  MATHMODE computational resources <a name="resources"></a>
@@ -63,13 +68,13 @@ We have a WhatsApp group to promote coexistence and dialogue. If you need to exc
    ```
 # <a id="tools"></a>Useful Tools
 
-## <a id="tmux"></a>tmux
+## tmux<a id="tmux"></a>
 
-## Hydra <a id="Hydra"></a>
+## <a id="hydra"></a>Hydra
 
 Hydra is a framework that facilitates running and collecting results of experiments with multiple variations or combinations of configuration parameters. See the [examples](https://github.com/Mathmode/hydra-examples) on how to use the Hydra Framework to configure and run computational experiments   developed by our colleague [Tomas Teijeiro](https://github.com/tomas-teijeiro).
 
-## Hydra <a id="profiler"></a>
+## Profiler <a id="profiler"></a>
 
 # <a id="FAQ"></a>Frequently Asked Questions:
 
@@ -80,7 +85,7 @@ You can try to install pip in your environment
 and force the desired package installation 
 ``` pip install tensorflow==2.15.0```
 
-**How can I edit a file on the server?**
+**How can I edit a file on the server?**<a name="edit_file"></a>
 
 use `vi filename` or `vim filename` (which does not require a graphical interface)
 
@@ -93,11 +98,11 @@ use `vi filename` or `vim filename` (which does not require a graphical interfac
  |:q  | quit|
  |:x  | save and quit|
 
-**The copy procedure from the server to my local pc and vice versa is so tedious. Can I do something?**
+**The copying procedure from the server to my local pc and vice versa is so tedious. Can I do something?**<a name="copy"></a>
 
 Sure! We recommend you install [FileZilla Client](https://filezilla-project.org/). You need to
 
-**Can I disconnect from the SSH connection and leave the code running?**
+**Can I disconnect from the SSH connection and leave the code running?**<a name="disconnect"></a>
 
  When you stop the SSH connection, the process that is in the server dies. To avoid this, you need to use `tmux` as follows
  
@@ -110,7 +115,7 @@ Sure! We recommend you install [FileZilla Client](https://filezilla-project.org/
   4) Detach the session: press `CTRL+b`, then release both keys and press `d`
   5) Disconnect from the server
 
-**How can I check if the code ended its execution on the server?**
+**How can I check if the code ended its execution on the server?**<a name="attach"></a>
 
 1) Connect to the server via SSH
 2) Attach to the session created before
@@ -127,5 +132,5 @@ To get a list of the currently running sessions:
    tmux ls
    ```
 
-**How can I run the code in one GPU and limit its memory?**
+**How can I run the code in one GPU and limit its memory?**<a name="limit_GPU"></a>
 🚧
