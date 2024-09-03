@@ -62,9 +62,14 @@ We have a WhatsApp group to promote coexistence and dialogue. If you need to exc
    taskset –ac 0-15 python myscript.py #(instead 0-15 put the free cores you want to use)
    ```
 # <a id="tools"></a>Useful Tools
+
 ## <a id="tmux"></a>tmux
+
 ## Hydra <a id="Hydra"></a>
+
 Hydra is a framework that facilitates running and collecting results of experiments with multiple variations or combinations of configuration parameters. See the [examples](https://github.com/Mathmode/hydra-examples) on how to use the Hydra Framework to configure and run computational experiments   developed by our colleague [Tomas Teijeiro](https://github.com/tomas-teijeiro).
+
+## Hydra <a id="profiler"></a>
 
 # <a id="FAQ"></a>Frequently Asked Questions:
 
