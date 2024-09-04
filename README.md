@@ -7,9 +7,9 @@
 >> ##### [Use of the servers](#rules)
 >> ##### [Useful commands](#commands)
 >> ##### [Useful tools](#tools)
->>> ###### [tmux🚧](#tmux)
->>> ###### [Hydra](#hydra)
->>> ###### [Profiler🚧](#profiler)
+>>> ###### [Persistent sessions: tmux🚧](#tmux)
+>>> ###### [Multiple configurations: Hydra](#hydra)
+>>> ###### [Profiling🚧](#profiler)
 >> ##### [Frequently Asked Questions](#faq)
 >>> ###### [Anaconda doesn't update a package to the version I want](#anaconda)
 >>> ###### [Edit file on the server](#edit_file)
@@ -69,14 +69,14 @@ We have a WhatsApp group to promote coexistence and dialogue. If you need to exc
 # <a id="tools"></a>Useful Tools
 
 
-## tmux<a id="tmux"></a>
+## Persistent sessions: tmux<a id="tmux"></a>
 🚧
 
-## <a id="hydra"></a>Hydra
+## <a id="hydra"></a>Multiple Configurations: Hydra
 
 Hydra is a framework that facilitates running and collecting results of experiments with multiple variations or combinations of configuration parameters. See the [examples](https://github.com/Mathmode/hydra-examples) on how to use the Hydra Framework to configure and run computational experiments   developed by our colleague [Tomas Teijeiro](https://github.com/tomas-teijeiro).
 
-## Profiler <a id="profiler"></a>
+## Profiling <a id="profiler"></a>
 🚧
 
 # <a id="faq"></a>Frequently Asked Questions:
