@@ -153,6 +153,11 @@ The main uses of tmux are to:
      
 A simple use of use tmux to run our code is explained in [this FAQ](#disconnect).
 
+🚧
+🚧
+🚧
+
+
 ## <a id="hydra"></a>Multiple configurations: Hydra
 
 Hydra is a framework that facilitates running and collecting results of experiments with multiple variations or combinations of configuration parameters. See the [examples](https://github.com/Mathmode/hydra-examples) on how to use the Hydra Framework to configure and run computational experiments   developed by our colleague [Tomas Teijeiro](https://github.com/tomas-teijeiro).
@@ -172,6 +177,7 @@ $ snakeviz output_profiling_file
 For memory profiling, we recommend the use of [memray](https://bloomberg.github.io/memray/).
 
 ## <a id="github"></a>Cloud repositories with version control: GitHub
+
 🚧
 🚧
 🚧
@@ -241,4 +247,26 @@ To get a list of the currently running sessions:
    ```
 
 **How can I run the code in one GPU and limit its memory?**<a name="limit_GPU"></a>
+
+In tensorflow >=2.15 you can use the code [`main_tf_GPU.py`](https://github.com/Mathmode/server_tools/blob/main/code/main_tf_GPU.py) to do so.
+To use it, you only need to import your main code by substituting the line `#from your_module import your_main` and then do the call by substituting the line `#your_main()`.
+
+Remember also to run it with a limited number of processors. You can specify with the flags which GPU you want to run on and how much memory you want.
+To run the code using the processors 0-15 in the GPU 0 and limiting the memory to 6192MB, execute:
+```
+taskset –ac 0-15 python main_tf_GPU.py --gpu 0 --vram 8192
+```
+If you prefer, you can invoke the function `run_code_in_GPU(GPU_number, memory_limit)` or similar in your main code.
+
+We have detected that in the Goliat server, the GPUs ID given with the command `nvidia-smi` does not match the number of the list of GPU devices recovered by TensorFlow. So we recommend seeing the use of the GPUs and then running your code attending to this table:
+
+ |GPU ID nvidia-smi |GPU ID TensorFlow |
+ | :---:   | :---: |
+ |0| 3|
+ |1| 4|
+ |2| 0|
+ |3| 1|
+ |4| 2|
+
 🚧
+
