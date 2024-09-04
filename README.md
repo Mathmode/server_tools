@@ -109,9 +109,9 @@ We also can install packages while creating an environment, specify them after t
    ```
    conda create -n tf python==3.9 numpy matplotlib
    ```
-We can a YAML file as [`tf215.yml`](https://github.com/Mathmode/server_tools/blob/main/code/tf215.yml) or [`tf217.yml`](https://github.com/Mathmode/server_tools/blob/main/code/tf217.yml) to create an environment with the desired packages. These files create the tf215 and tf217 environments, respectively, with useful packages such as Tensorflow 2.15(Keras 2.X) or Tensorflow 2.17(+Keras 3.5).
+We can use a YAML file as [`tf215.yml`](https://github.com/Mathmode/server_tools/blob/main/code/tf215.yml) or [`tf217.yml`](https://github.com/Mathmode/server_tools/blob/main/code/tf217.yml) to create an environment with the desired packages. These files create the tf215 and tf217 environments, respectively, with useful packages such as Tensorflow 2.15(Keras 2.X) or Tensorflow 2.17(Keras 3.5).
    ```
-   conda env create -f tf.yml 
+   conda env create -f tf217.yml 
    ```
 You can make an exact copy of an environment (tf) by creating a clone (tf_clone) of it:
    ```
