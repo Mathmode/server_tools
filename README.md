@@ -72,12 +72,23 @@ We have a WhatsApp group to promote coexistence and dialogue. If you need to exc
 ## Persistent sessions: tmux<a id="tmux"></a>
 🚧
 
-## <a id="hydra"></a>Multiple Configurations: Hydra
+## <a id="hydra"></a>Multiple configurations: Hydra
 
 Hydra is a framework that facilitates running and collecting results of experiments with multiple variations or combinations of configuration parameters. See the [examples](https://github.com/Mathmode/hydra-examples) on how to use the Hydra Framework to configure and run computational experiments   developed by our colleague [Tomas Teijeiro](https://github.com/tomas-teijeiro).
 
 ## Profiling <a id="profiler"></a>
-🚧
+
+### CPU profiling
+
+For CPU profiling, we recommend the combination of the standard module [cProfile](https://docs.python.org/3/library/profile.html) and the [snakeviz](https://jiffyclub.github.io/snakeviz/) viewer. Just two commands are enough to get started:
+ ```
+$ python -m cProfile -o output_profiling_file script.py
+$ snakeviz output_profiling_file
+ ```
+
+### Memory profiling
+
+For memory profiling, we recommend the use of [memray](https://bloomberg.github.io/memray/).
 
 # <a id="faq"></a>Frequently Asked Questions:
 🚧
