@@ -12,7 +12,7 @@
 >>> ###### [Persistent sessions: tmux](#tmux)
 >>> ###### [Multiple configurations: Hydra](#hydra)
 >>> ###### [Profiling](#profiler)
->>> ###### [Cloud repositories with version control🚧](#GitHub)
+>>> ###### [Cloud repositories with version control: GitHub🚧](#github)
 >> ##### [Frequently Asked Questions](#faq)
 >>> ###### [Anaconda doesn't update a package to the version I want](#anaconda)
 >>> ###### [Edit file on the server](#edit_file)
@@ -171,7 +171,7 @@ $ snakeviz output_profiling_file
 
 For memory profiling, we recommend the use of [memray](https://bloomberg.github.io/memray/).
 
-## <a id="GitHub"></a>Cloud repositories with version control
+## <a id="github"></a>Cloud repositories with version control: GitHub
 🚧
 🚧
 🚧
