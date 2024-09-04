@@ -7,6 +7,8 @@
 >> ##### [Use of the servers](#rules)
 >> ##### [Useful commands](#commands)
 >> ##### [Useful tools](#tools)
+>>> ###### [Use environments to manage Python packages: Miniconda🚧](#conda)
+>>> ###### [IDE for scientific programming in the Python: Spyder](#spyder)
 >>> ###### [Persistent sessions: tmux🚧](#tmux)
 >>> ###### [Multiple configurations: Hydra](#hydra)
 >>> ###### [Profiling🚧](#profiler)
@@ -15,7 +17,6 @@
 >>> ###### [Edit file on the server](#edit_file)
 >>> ###### [The copying procedure from the server to my local pc and vice versa is so tedious](#copy)
 >>> ###### [Can I disconnect from the SSH connection and leave the code running?](#disconnect)
->>> ###### [How can I check if the code ended its execution on the server?](#attach)
 >>> ###### [How can I run the code in one GPU and limit its memory?](#limit_GPU)
 * * * * *
 
@@ -68,9 +69,89 @@ We have a WhatsApp group to promote coexistence and dialogue. If you need to exc
    ```
 # <a id="tools"></a>Useful Tools
 
+## Use environments to manage Python packages: Miniconda<a id="conda"></a>
+Anaconda and Miniconda are a distributions of the Python and R programming languages for scientific computing that aims to simplify package management and deployment.
+Both Anaconda Distribution and Miniconda include the conda package and environment manager. The main difference is that Anaconda has a graphical interface form manage and includes more python packages (250+) than Miniconda(<70). **If you use our servers you have to install there Miniconda.** We also recomend this distribution for your computer and we encourage that you use it from the terminal.
+
+### Basic usage guide
+Conda allows you to create separate environments, each containing their own files, packages, and package dependencies. The contents of each environment do not interact with each other.
+
+The basic way to create a new environment (with name tf) is:
+   ```
+   conda create -n tf
+   ```
+You can see the list of the environments you have
+  ```
+  conda env list
+  ```
+To go inside the environment we have created we need to activate it
+   ```
+   conda activate tf
+   ```
+Then we can install Python packages
+   ```
+   conda install numpy
+   ```
+but sometimes a package you want is located in another channel, such as conda-forge, you can manually specify the channel when installing the package:
+   ```
+   conda install conda-forge::tensorflow==2.15
+   ```
+Occasionally a package needed which is not available as a conda package but is available on PyPI and can be installed with pip. In these cases, it makes sense to try to use both conda and pip.
+   ```
+    conda install pip
+   ```
+   ```
+   pip install keras==3.0
+   ```
+
+We also can install packages while creating an environment, specify them after the environment name:
+   ```
+   conda create -n tf python==3.9 numpy matplotlib
+   ```
+We can do exactly the same but using a YAML file [`tf.yml`]()🚧🚧🚧🚧
+   ```
+   conda env create -f tf.yml 
+   ```
+You can make an exact copy of an environment (tf) by creating a clone (tf_clone) of it:
+   ```
+   conda create --name tf_clone --clone tf
+   ```
+To list all of the packages in the active environment:
+  ```
+  conda list
+  ```
+To remove a package such as keras in the current environment:
+  ```
+  conda remove keras
+  ```
+To remove an environmet you need to be outside.
+  ```
+  conda deactivate
+  ```
+  ```
+  conda remove --name tf --all
+  ```
+🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧
+## IDE for scientific programming in the Python: Spyder<a id="spyder"></a>
+[Spyder](https://www.spyder-ide.org/) is an open-source cross-platform Integrated Development Environment (IDE) for scientific programming in the Python language.
+![alt text](https://raw.githubusercontent.com/spyder-ide/spyder/5.x/img_src/screenshot.png)
 
 ## Persistent sessions: tmux<a id="tmux"></a>
-🚧
+tmux is a program which runs in a terminal and allows multiple other terminal programs to be run inside it. Each program inside tmux gets its own terminal managed by tmux, which can be accessed from the single terminal where tmux is running.
+
+tmux, and any programs running inside it, may be detached from the terminal where it is running (the outside terminal) and later reattached to the same or another terminal.
+
+The main uses of tmux are to:
+
+   * Protect running programs on a remote server from connection drops by running them inside tmux.
+
+   * Allow programs running on a remote server to be accessed from multiple different local computers.
+
+   * Work with multiple programs and shells together in one terminal, a bit like a window manager.
+     
+A simple use of use tmux to run our code is explained in [this FAQ](#disconnect).
+
+🚧🚧🚧🚧🚧🚧🚧
 
 ## <a id="hydra"></a>Multiple configurations: Hydra
 
@@ -91,7 +172,6 @@ $ snakeviz output_profiling_file
 For memory profiling, we recommend the use of [memray](https://bloomberg.github.io/memray/).
 
 # <a id="faq"></a>Frequently Asked Questions:
-🚧
 
 **What can I do if Anaconda doesn't update a package to the version I want?**<a name="anaconda"></a>
 
@@ -130,7 +210,7 @@ Sure! We recommend you install [FileZilla Client](https://filezilla-project.org/
   4) Detach the session: press `CTRL+b`, then release both keys and press `d`
   5) Disconnect from the server
 
-**How can I check if the code ended its execution on the server?**<a name="attach"></a>
+To check if the code ended its execution on the server:
 
 1) Connect to the server via SSH
 2) Attach to the session created before
