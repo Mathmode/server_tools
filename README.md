@@ -96,7 +96,7 @@ but sometimes a package you want is located in another channel, such as conda-fo
    ```
    conda install conda-forge::tensorflow==2.15
    ```
-Occasionally a package needed which is not available as a conda package but is available on PyPI and can be installed with pip. In these cases, it makes sense to try to use both conda and pip.
+Occasionally a package needed which is not available as a conda package but is available on PyPI and can be installed with pip. In these cases, trying to use conda and pip makes sense.
    ```
     conda install pip
    ```
@@ -108,7 +108,7 @@ We also can install packages while creating an environment, specify them after t
    ```
    conda create -n tf python==3.9 numpy matplotlib
    ```
-We can do exactly the same but using a YAML file [`tf.yml`]()🚧🚧🚧🚧
+We can do exactly the same but using a YAML file [`tf.yml`](https://github.com/Mathmode/server_tools/blob/main/code/tf.yml)
    ```
    conda env create -f tf.yml 
    ```
