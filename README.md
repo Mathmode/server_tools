@@ -109,7 +109,7 @@ We also can install packages while creating an environment, specify them after t
    ```
    conda create -n tf python==3.9 numpy matplotlib
    ```
-We can do exactly the same but using a YAML file [`tf.yml`](https://github.com/Mathmode/server_tools/blob/main/code/tf.yml). This file creates an environment called tf with some useful packages, such as Tensorflow 2.15.
+We can a YAML file as [`tf215.yml`](https://github.com/Mathmode/server_tools/blob/main/code/tf215.yml) or [`tf217.yml`](https://github.com/Mathmode/server_tools/blob/main/code/tf217.yml) to create an environment with the desired packages. These files create the tf215 and tf217 environments, respectively, with useful packages such as Tensorflow 2.15(Keras 2.X) or Tensorflow 2.17(+Keras 3.5).
    ```
    conda env create -f tf.yml 
    ```
