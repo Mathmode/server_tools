@@ -153,9 +153,39 @@ The main uses of tmux are to:
      
 A simple use of use tmux to run our code is explained in [this FAQ](#disconnect).
 
-🚧
-🚧
-🚧
+#### Starting and Exiting Tmux
+
+| Command | Description|
+| :---:   | :---: |
+tmux new -s <session-name> | Start a new tmux session|
+tmux attach | Attach to the last tmux session |
+tmux attach -t <session-name> | Attach to a specific tmux session |
+tmux ls | List all tmux sessions |
+tmux kill-session -t <session-name> | Kill a specific tmux session |
+tmux kill-server | Kill the tmux server and all sessions |
+|`Ctrl + b`   `d` | Detach from the current session |
+
+
+####  Tmux Windows and Panes
+| Command | Description|
+| :---:   | :---: |
+|`Ctrl + b`   `c` | Create a new window |
+|`Ctrl + b`   `n` | Switch to the next window |
+|`Ctrl + b`   `p` | Switch to the previous window|
+|`Ctrl + b`   `<number>` | Switch to a specific window|
+|`Ctrl + b`   `w` | List all windows|
+|`Ctrl + b`   `%` | Split the current pane vertically|
+|`Ctrl + b`   `"` | Split the current pane horizontally|
+|`Ctrl + b`   `o` | Switch to the next pane|
+|`Ctrl + b`   `arrow key` | Move between panes|
+
+
+#### Tmux Miscellaneous Commands
+| Command | Description|
+| :---:   | :---: |
+|`Ctrl + b`   `?` |List all tmux commands and their key bindings|
+|`Ctrl + b`   `:` | Enter a tmux command prompt|
+|tmux source-file <filename> | Reload the tmux configuration file|
 
 
 ## <a id="hydra"></a>Multiple configurations: Hydra
