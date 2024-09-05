@@ -238,7 +238,7 @@ To check if the code ended its execution on the server:
    ```
 3) Remember to kill the session after the simulation is finished!}
    ```
-   tmux kill-session -t \textit{name}
+   tmux kill-session -t session_name
    ```
 
 To get a list of the currently running sessions:
