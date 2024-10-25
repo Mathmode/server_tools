@@ -56,6 +56,10 @@ We have a WhatsApp group to promote coexistence and dialogue. Please ask in the 
    ```
    scp -r Desktop/folder_name username@10.10.15.20
    ```
+*  file synchronization `rsync -a <origin> <destination>`
+   ```
+   rsync -a  Desktop/folder_name username@10.10.15.20/folder
+   ```
 * monitor the server processes 
    ```
    htop
@@ -71,6 +75,8 @@ We have a WhatsApp group to promote coexistence and dialogue. Please ask in the 
 # <a id="tools"></a>Useful Tools
 
 ## Use environments to manage Python packages: Miniconda<a id="conda"></a>
+Note: The use of Anaconda’s public repository of packages is only free to individuals and small organizations (<200 employees). An option to create environments is [venv](https://docs.python.org/3/library/venv.html).
+
 Anaconda and Miniconda are distributions of the Python and R programming languages for scientific computing that aim to simplify package management and deployment.
 Both Anaconda Distribution and Miniconda include the conda package and environment manager. The main difference is that Anaconda has a graphical interface to manage and includes more Python packages (250+) than Miniconda(<70). **If you use our servers, you have to install Miniconda there.** We also recommend this distribution for your computer, and we encourage you to use it from the terminal.
 
